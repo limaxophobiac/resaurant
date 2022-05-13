@@ -1,22 +1,17 @@
 import buildHome from './home.js';
+import buildContact from './contact.js';
+import buildMenu from './menu.js';
 
 const contentDiv = document.getElementById('content');
 
 document.body.style.margin = "0px";
 document.body.style.padding = "0px";
 
-
-
 contentDiv.style.margin = "0px";
 contentDiv.style.padding = "0px";
 contentDiv.style.minHeight = "100vh";
-contentDiv.style.backgroundAttachment = "fixed";
-contentDiv.style.backgroundSize = "cover";
-contentDiv.style.backgroundPosition = "center";
-
 
 createHeader();
-
 buildHome();
 
 function createHeader(){
@@ -47,6 +42,7 @@ function createHeader(){
         buildHome();
     });
 
+    homeButton.style.transitionDuration = "0.2s";
     homeButton.addEventListener('mouseover', () => homeButton.style.transform = "scale(1.3)");
     homeButton.addEventListener('mouseleave', () => homeButton.style.transform = 'none');
 
@@ -54,8 +50,10 @@ function createHeader(){
     menuButton.style.cursor = "pointer";
     menuButton.addEventListener('click', () => {
         clearContent();
+        buildMenu();
     });
 
+    menuButton.style.transitionDuration = "0.2s";
     menuButton.addEventListener('mouseover', () => menuButton.style.transform = "scale(1.3)");
     menuButton.addEventListener('mouseleave', () => menuButton.style.transform = 'none');
 
@@ -63,8 +61,10 @@ function createHeader(){
     contactButton.style.cursor = "pointer";
     contactButton.addEventListener('click', () => {
         clearContent();
+        buildContact();
     });
 
+    contactButton.style.transitionDuration = "0.2s";
     contactButton.addEventListener('mouseover', () => contactButton.style.transform = "scale(1.3)");
     contactButton.addEventListener('mouseleave', () => contactButton.style.transform = 'none');
 
@@ -72,5 +72,4 @@ function createHeader(){
 
 function clearContent(){
     contentDiv.innerHTML = "";
-    contentDiv.style.backgroundImage = "none";
 }
