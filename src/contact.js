@@ -17,10 +17,14 @@ const buildContact = () => {
 
     const contactBox = document.createElement('div');
     contactBox.style.backgroundColor = "rgba(0,0,0, 0.25)";
-    contactBox.style.padding = "2.5vh 5vw 5vh 5vw";
+    contactBox.style.padding = "20px 40px 40px 40px";
     contactBox.style.color = "white";
-    contactBox.style.borderRadius = "10px";
+    contactBox.style.borderRadius = "5px";
     contactBox.style.marginTop = "120px";
+    contactBox.style.display = "flex";
+    contactBox.style.flexDirection = "column";
+    contactBox.style.gap = "10px";
+
 
     const contactTitle = document.createElement('div');
     contactTitle.innerHTML = "Contact Us";
@@ -28,11 +32,11 @@ const buildContact = () => {
     contactBox.appendChild(contactTitle);
 
     const contactNumber = document.createElement('div');
-    contactNumber.innerHTML = "12-345 67 89";
+    contactNumber.innerHTML = "Phone: 12-345 67 89";
     contactBox.appendChild(contactNumber);
 
     const contactEmail = document.createElement('div');
-    contactEmail.innerHTML = "fake@email.com";
+    contactEmail.innerHTML = "Email: fake@email.com";
     contactBox.appendChild(contactEmail);
 
     const mapImage = new Image();
